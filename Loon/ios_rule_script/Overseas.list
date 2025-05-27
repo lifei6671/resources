@@ -24,5 +24,6 @@ DOMAIN-SUFFIX, browser-intake-datadoghq.com
 
 # TikTok
 DOMAIN-SUFFIX, tiktokcdn-us.com
+USER-AGENT,TikTok*
 
 
