@@ -13,3 +13,6 @@ DOMAIN,analytics.95516.com
 DOMAIN,ada.baidu.com
 DOMAIN,mobads.baidu.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
+
+#更新广告
+DOMAIN-SUFFIX,wxs.qq.com 
