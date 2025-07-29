@@ -22,6 +22,10 @@ DOMAIN-SUFFIX, chatgpt.com
 DOMAIN-SUFFIX, openai.com
 DOMAIN-SUFFIX, browser-intake-datadoghq.com
 
+DOMAIN-SUFFIX,isitai.com
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+
 # TikTok
 DOMAIN-SUFFIX, tiktokcdn-us.com
 USER-AGENT,TikTok*
