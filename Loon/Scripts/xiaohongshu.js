@@ -65,14 +65,12 @@ if (url.includes("/system_service/splash_config")) {
         }
     }
 }
-console.log("当前请求url" + url);
+
 if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
     console.log("开始处理imagefeed流");
     // 信息流 图片
     if (obj?.data?.length > 0) {
-        console.log("小红书存在已返回的数据")
         if (obj.data[0]?.note_list?.length > 0) {
-            console.log("找到当前图文");
             for (let item of obj.data[0].note_list) {
                 if (item?.media_save_config) {
                     // 水印开关
@@ -387,7 +385,7 @@ $done({body: JSON.stringify(obj)});
 
 // 小红书画质增强：加载2K分辨率的图片
 function imageEnhance(imageList) {
-    console.log('原始数据:', JSON.stringify(imageList));
+    console.log('原始数据:'+ JSON.stringify(imageList));
     let newList = imageList.map(item => {
         // 避免引用修改原数据
         item = {...item};
@@ -410,7 +408,7 @@ function imageEnhance(imageList) {
         return item;
     });
 
-    console.log('增强后数据:', JSON.stringify(newList));
+    console.log('增强后数据:'+ JSON.stringify(newList));
     console.log('图片画质增强完成✅');
 
     return newList;
