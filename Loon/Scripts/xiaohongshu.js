@@ -390,7 +390,8 @@ function imageEnhance(imageList) {
     }
     console.log(JSON.stringify(imageList));
     let newList = [];
-    for (let item in imageList) {
+
+    imageList.forEach(item => {
         if (!item?.need_load_original_image) {
             item.need_load_original_image = true;
         }
@@ -408,7 +409,7 @@ function imageEnhance(imageList) {
             }
         }
         newList.push(item);
-    }
+    })
     // const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
     // console.log(`Image Quality: ${imageQuality}`);
     // if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
