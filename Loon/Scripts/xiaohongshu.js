@@ -67,9 +67,12 @@ if (url.includes("/system_service/splash_config")) {
 }
 
 if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
+    console.log("开始处理imagefeed流")
     // 信息流 图片
     if (obj?.data?.length > 0) {
+        console.log("小红书存在已返回的数据")
         if (obj.data[0]?.note_list?.length > 0) {
+            console.log("找到当前图文")
             for (let item of obj.data[0].note_list) {
                 if (item?.media_save_config) {
                     // 水印开关
