@@ -384,54 +384,33 @@ $done({body: JSON.stringify(obj)});
 
 // 小红书画质增强：加载2K分辨率的图片
 function imageEnhance(imageList) {
-    if (!imageList) {
-        console.error("jsonStr is undefined or null");
-        return [];
-    }
-    console.log(JSON.stringify(imageList));
-    let newList = [];
+    console.log('原始数据:', JSON.stringify(imageList));
+    let newList = imageList.map(item => {
+        // 避免引用修改原数据
+        item = {...item};
 
-    imageList.forEach(item => {
-        if (!item?.need_load_original_image) {
+        if (!item.need_load_original_image) {
             item.need_load_original_image = true;
         }
-        if (item?.original) {
-            if (item?.url) {
-                item.url = item.original;
-            }
-            if (item?.url_size_large) {
-                item.url_size_large = item.original;
-            }
-            if (item?.url_multi_level) {
-                item.url_multi_level.low = item.original;
-                item.url_multi_level.medium = item.original;
-                item.url_multi_level.high = item.original;
+
+        if (item.original) {
+            if (item.url) item.url = item.original;
+            if (item.url_size_large) item.url_size_large = item.original;
+            if (item.url_multi_level) {
+                item.url_multi_level = {
+                    low: item.original,
+                    medium: item.original,
+                    high: item.original
+                };
             }
         }
-        newList.push(item);
-    })
-    // const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
-    // console.log(`Image Quality: ${imageQuality}`);
-    // if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
-    //     console.log("画质设置为-原始分辨率");
-    //     jsonStr = jsonStr.replace(/\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/, "?imageView2/0/format/png&redImage/frame/0");
-    // } else { // 高像素输出
-    //     console.log("画质设置为-高像素输出");
-    //     const regex1 = /imageView2\/2\/w\/\d+\/format/g;
-    //     jsonStr = jsonStr.replace(regex1, `imageView2/2/w/2160/format`);
-    //
-    //     const regex2 = /imageView2\/2\/h\/\d+\/format/g;
-    //     jsonStr = jsonStr.replace(regex2, `imageView2/2/h/2160/format`);
-    // }
-    console.log(JSON.stringify(newList));
+        return item;
+    });
+
+    console.log('增强后数据:', JSON.stringify(newList));
     console.log('图片画质增强完成✅');
 
-    try {
-        return newList;
-    } catch (e) {
-        console.error("JSON parsing error: ", e);
-        return [];
-    }
+    return newList;
 }
 
 function replaceUrlContent(collectionA, collectionB) {
