@@ -388,6 +388,7 @@ function imageEnhance(imageList) {
         console.error("jsonStr is undefined or null");
         return [];
     }
+    console.log(JSON.stringify(imageList));
     let newList = [];
     for (let item in imageList) {
         if (!item?.need_load_original_image) {
@@ -421,6 +422,7 @@ function imageEnhance(imageList) {
     //     const regex2 = /imageView2\/2\/h\/\d+\/format/g;
     //     jsonStr = jsonStr.replace(regex2, `imageView2/2/h/2160/format`);
     // }
+    console.log(JSON.stringify(newList));
     console.log('图片画质增强完成✅');
 
     try {
