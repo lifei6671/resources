@@ -29,6 +29,8 @@ DOMAIN-SUFFIX,x.ai
 
 # TikTok
 DOMAIN-SUFFIX, tiktokcdn-us.com
+DOMAIN-SUFFIX, tiktokv.com
+DOMAIN-SUFFIX, tiktokcdn.com
 USER-AGENT,TikTok*
 
 
