@@ -7,30 +7,30 @@
 
 # 代理规则
 
-DOMAIN, sub-store.vercel.app
-DOMAIN, ip-api.com
-DOMAIN, raw.githubusercontent.com
-DOMAIN, i.ytimg.com
-DOMAIN, api.cobalt.tools
-DOMAIN, kelee.one
-DOMAIN-SUFFIX, 顶级机场.com
-DOMAIN-SUFFIX, bsky.app
-DOMAIN-SUFFIX, bsky.social
-DOMAIN-SUFFIX, statsigapi.net
-DOMAIN-SUFFIX, bsky.network
-DOMAIN-SUFFIX, chatgpt.com
-DOMAIN-SUFFIX, openai.com
-DOMAIN-SUFFIX, browser-intake-datadoghq.com
-DOMAIN-SUFFIX, oaiusercontent.com
+DOMAIN,sub-store.vercel.app
+DOMAIN,ip-api.com
+DOMAIN,raw.githubusercontent.com
+DOMAIN,i.ytimg.com
+DOMAIN,api.cobalt.tools
+DOMAIN,kelee.one
+DOMAIN-SUFFIX,顶级机场.com
+DOMAIN-SUFFIX,bsky.app
+DOMAIN-SUFFIX,bsky.social
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,bsky.network
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,oaiusercontent.com
 
 DOMAIN-SUFFIX,isitai.com
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,x.ai
 
 # TikTok
-DOMAIN-SUFFIX, tiktokcdn-us.com
-DOMAIN-SUFFIX, tiktokv.com
-DOMAIN-SUFFIX, tiktokcdn.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokcdn.com
 USER-AGENT,TikTok*
 
 
