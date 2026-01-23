@@ -433,7 +433,7 @@ function imageEnhance(imageList) {
 // 启用下载
 function functionSwitch(functionSwitch) {
     console.log('下载原始数据:'+ JSON.stringify(functionSwitch));
-    let functionSwitchItem = functionSwitch.forEach(item => {
+    let functionSwitchItem = functionSwitch.map(item => {
         item = {...item};
         if (item.hasOwnProperty("type") && item.type === "image_download") {
             item.enable = true
