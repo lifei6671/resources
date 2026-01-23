@@ -433,15 +433,16 @@ function imageEnhance(imageList) {
 // 启用下载
 function functionSwitch(functionSwitch) {
     console.log('下载原始数据:'+ JSON.stringify(functionSwitch));
-    functionSwitch.forEach(item => {
+    let functionSwitchItem = functionSwitch.forEach(item => {
         item = {...item};
         if (item.hasOwnProperty("type") && item.type === "image_download") {
             item.enable = true
         }
         return item;
     });
+    console.log('下载功能开关增强数据:'+ JSON.stringify(functionSwitchItem));
     console.log('下载功能开关增强完成✅');
-    return functionSwitch;
+    return functionSwitchItem;
 }
 function replaceUrlContent(collectionA, collectionB) {
     console.log('替换无水印的URL');
