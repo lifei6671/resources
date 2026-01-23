@@ -11,6 +11,7 @@ let rsp_body = $response.body;
 if (!rsp_body) {
     $done({});
 }
+ console.log("原始响应" + url + rsp_body);
 let obj = JSON.parse(rsp_body);
 
 if (url.includes("/search/banner_list")) {
