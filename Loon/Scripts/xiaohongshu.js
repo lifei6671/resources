@@ -394,6 +394,15 @@ function imageEnhance(imageList) {
         if (!item.need_load_original_image) {
             item.need_load_original_image = true;
         }
+        if (item.hasOwnProperty("function_switch")) {
+            // 解除下载限制
+            item.function_switch = item.function_switch.map(switchItem => {
+                if (switchItem.hasOwnProperty("type") && switchItem.type === "image_download") {
+                    switchItem.enable = true
+                }
+                return switchItem;
+            })
+        }
 
         if (item.original) {
             if (item.url) item.url = item.original;
