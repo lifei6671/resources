@@ -97,6 +97,12 @@ if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
             const images_list = obj.data[0].note_list[0].images_list;
             // 画质增强
             obj.data[0].note_list[0].images_list = imageEnhance(images_list);
+
+            // 添加功能按钮
+            if (obj.data[0].note_list[0].function_switch) {
+                functionSwitchItem = obj.data[0].note_list[0].function_switch;
+                obj.data[0].note_list[0].function_switch = functionSwitch(functionSwitchItem);
+            }
             // 保存无水印信息
             $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
             console.log('已存储无水印信息♻️');
@@ -397,6 +403,7 @@ function imageEnhance(imageList) {
         if (item.hasOwnProperty("function_switch")) {
             // 解除下载限制
             item.function_switch = item.function_switch.map(switchItem => {
+                switchItem = {...switchItem};
                 if (switchItem.hasOwnProperty("type") && switchItem.type === "image_download") {
                     switchItem.enable = true
                 }
@@ -423,7 +430,19 @@ function imageEnhance(imageList) {
 
     return newList;
 }
-
+// 启用下载
+function functionSwitch(functionSwitch) {
+    console.log('下载原始数据:'+ JSON.stringify(functionSwitch));
+    functionSwitch.forEach(item => {
+        item = {...item};
+        if (item.hasOwnProperty("type") && item.type === "image_download") {
+            item.enable = true
+        }
+        return item;
+    });
+    console.log('下载功能开关增强完成✅');
+    return functionSwitch;
+}
 function replaceUrlContent(collectionA, collectionB) {
     console.log('替换无水印的URL');
     collectionA.forEach(itemA => {
