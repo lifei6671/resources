@@ -1,0 +1,11 @@
+payload:
+  # 这些站点固定走节点选择，优先于后续通用远程规则命中。
+  - 'DOMAIN-SUFFIX,bulianglin.com'
+  - 'DOMAIN-SUFFIX,oaiusercontent.com'
+  - 'DOMAIN-SUFFIX,ksky.app'
+  - 'DOMAIN-SUFFIX,ksky.social'
+  - 'DOMAIN-SUFFIX,yugogo.xyz'
+  - 'DOMAIN-SUFFIX,edgeservices.bing.com'
+  - 'DOMAIN-SUFFIX,kelee.one'
+  - 'DOMAIN,www.ipaddress.my'
+  - 'DOMAIN-SUFFIX,jetbrains.com'
