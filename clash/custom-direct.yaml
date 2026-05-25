@@ -20,6 +20,7 @@ payload:
   - 'IP-CIDR,10.0.0.0/8,no-resolve'
   - 'IP-CIDR,172.16.0.0/12,no-resolve'
   - 'IP-CIDR,192.168.0.0/16,no-resolve'
+  - 'IP-CIDR,198.18.0.0/16,no-resolve'
 
   # 本机、运营商 CGNAT、多播和 IPv6 本地链路不进入代理链路。
   - 'IP-CIDR,127.0.0.0/8,no-resolve'
