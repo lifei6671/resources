@@ -1,4 +1,4 @@
-#!name=广告规则合集
+#!name=自用广告规则合集
 #!desc=Loon广告规则合集
 #!author=lifei6671
 #!homepage=https://github.com/lifei6671/resources/raw/main/Loon/ios_rule_script/AdBlock.list
@@ -16,3 +16,23 @@ DOMAIN,mobads-pre-config.cdn.bcebos.com
 
 #更新广告
 DOMAIN-SUFFIX,wxs.qq.com 
+DOMAIN,sdk.beizi.biz
+DOMAIN,ujoy.anythinktech.com
+DOMAIN,tk.anythinktech.com
+DOMAIN,da.statisticslinks.com
+DOMAIN,api-htp.beizi.biz
+DOMAIN,sdk.1rtb.net
+DOMAIN,cpc-service-square.iggrowth.cn
+DOMAIN,cpc-service-square.yunxish.com
+DOMAIN,md-cfg-u1.ubixioe.com
+DOMAIN,api.yunxish.com
+DOMAIN,adx-cfg-u1.ubixioe.com
+DOMAIN,entry-su1.ubixioe.com
+DOMAIN,dsp-creative.ubixioe.com
+DOMAIN,resource-m-r.ad-scope.com.cn
+DOMAIN,dspvideo.umeng.com
+DOMAIN,tencent-ssp.66mobi.com
+DOMAIN,impdsp.meituan.com
+DOMAIN,callback.funmob.cn
+DOMAIN,ssp.1rtb.com
+
